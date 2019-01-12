@@ -9,7 +9,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring-boot.version>2.0.5.RELEASE</spring-boot.version>
+		<!--<spring-boot.version>2.0.4.RELEASE</spring-boot.version>-->
 		<net-devh-grpc.version>2.0.1.RELEASE</net-devh-grpc.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -18,21 +18,29 @@
 		<protoc.version>3.6.1</protoc.version>
 		<protobuf.plugin.version>0.6.1</protobuf.plugin.version>
 		<mybatis.spring-boot.version>1.3.2</mybatis.spring-boot.version>
+		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+		<spring-platform.version>Cairo-RELEASE</spring-platform.version>
 	</properties>
+	<!--<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.4.RELEASE</version>
+		<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
+	</parent>-->
 	<dependencyManagement>
 		<dependencies>
 			<!--依赖维护平台,在添加第三方依赖的时候，不需要写版本号，它能够自动帮我们挑选一个最优的版本 -->
 			<dependency>
 				<groupId>io.spring.platform</groupId>
 				<artifactId>platform-bom</artifactId>
-				<version>Cairo-RELEASE</version>
+				<version>${spring-platform.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Finchley.SR2</version>
+				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -71,6 +79,14 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 	<build>
 		<plugins>
@@ -89,5 +105,6 @@
 		<module>4910010</module>
 		<module>4910010R</module>
 		<module>4910010RA</module>
+		<module>4100000C</module>
 	</modules>
 </project>

@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@Configuration
 public class Application4910010R {
 
 	public static void main(String[] args) {

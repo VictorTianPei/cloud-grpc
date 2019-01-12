@@ -1,3 +1,7 @@
+server:
+  port: 14911
+  servlet:
+    context-path: /4910010RA
 management:
   endpoints:
     web:

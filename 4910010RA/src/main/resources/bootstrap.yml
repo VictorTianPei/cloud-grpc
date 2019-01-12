@@ -1,0 +1,25 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  application:
+    name: boot-4910010RA
+#  zipkin: 
+#    base-url: http://127.0.0.1:9411
+  cloud:
+    config: 
+      uri: http://localhost:14000/4000000C/
+      label: master
+      profile: dev
+    discovery: 
+      enabled: false
+      service-id: boot-4000000C
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckInterval: 15s
+        tags: version=1.0
+        healthCheckPath: ${server.servlet.context-path}/actuator/health

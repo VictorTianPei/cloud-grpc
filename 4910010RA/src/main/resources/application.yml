@@ -1,0 +1,9 @@
+#grpc:
+#  client:
+#    boot-4910010R: 
+#      host: 
+#      - ${LOCAL-GRPC-HOST:127.0.0.1}
+#      port:
+#      - 24910
+#      enableKeepAlive: true
+#      keepAliveWithoutCalls: true

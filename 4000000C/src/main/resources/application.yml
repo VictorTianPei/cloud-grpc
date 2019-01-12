@@ -1,0 +1,30 @@
+server:
+  port: 14000
+  servlet: 
+    context-path: /4000000C
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  application:
+    name: boot-4000000C
+#  zipkin:
+#    base-url: http://127.0.0.1:9411
+  cloud:  
+    config:
+      server:
+        git: #配置git仓库地址
+          uri: file:E:/mygit/config-center
+        search-paths: /**
+    label: master
+#    username: 
+#    password: 
+    consul: 
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckInterval: 15s
+        tags: version=1.0
+        healthCheckPath: ${server.servlet.context-path}/actuator/health

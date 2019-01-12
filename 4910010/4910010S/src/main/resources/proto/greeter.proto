@@ -1,12 +1,13 @@
 syntax = "proto3";
 
 option java_package = "com.jw.platform.pcm.m4910.f010.microservice";
+option java_outer_classname = "GreeterProto";
 
+//package helloworld;
 // The greeter service definition.
 service Greeter {
     // Sends a greeting
-    rpc SayHello ( HelloRequest) returns (  HelloReply) {}
-
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
 }
 // The request message containing the user's name.
 message HelloRequest {

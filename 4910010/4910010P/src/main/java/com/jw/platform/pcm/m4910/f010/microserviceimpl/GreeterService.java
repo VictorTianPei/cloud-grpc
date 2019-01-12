@@ -9,10 +9,8 @@
 package com.jw.platform.pcm.m4910.f010.microserviceimpl;
 
 import com.jw.platform.pcm.m4910.f010.microservice.GreeterGrpc;
-import com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass;
-
+import com.jw.platform.pcm.m4910.f010.microservice.GreeterProto;
 import io.grpc.stub.StreamObserver;
-import lombok.extern.slf4j.Slf4j;
 import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
 
 /**
@@ -27,12 +25,12 @@ import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
 2019年1月4日|tianpei|新增|GreeterServic.java新增
 */
 //@Slf4j
-@GrpcService(GreeterOuterClass.class)
+@GrpcService(GreeterProto.class)
 public class GreeterService extends GreeterGrpc.GreeterImplBase {
     @Override
-    public void sayHello(GreeterOuterClass.HelloRequest request, StreamObserver<GreeterOuterClass.HelloReply> responseObserver) {
+    public void sayHello(GreeterProto.HelloRequest request, StreamObserver<GreeterProto.HelloReply> responseObserver) {
         String message = "Hello333344444 " + request.getName();
-        final GreeterOuterClass.HelloReply.Builder replyBuilder = GreeterOuterClass.HelloReply.newBuilder().setMessage(message);
+        final GreeterProto.HelloReply.Builder replyBuilder = GreeterProto.HelloReply.newBuilder().setMessage(message);
         responseObserver.onNext(replyBuilder.build());
         responseObserver.onCompleted();
       //  log.info("Returning " +message);

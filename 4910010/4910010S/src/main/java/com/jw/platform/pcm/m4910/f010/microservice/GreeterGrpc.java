@@ -17,6 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
+ *package helloworld;
  * The greeter service definition.
  * </pre>
  */
@@ -30,30 +31,30 @@ public final class GreeterGrpc {
   public static final String SERVICE_NAME = "Greeter";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest,
-      com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply> getSayHelloMethod;
+  private static volatile io.grpc.MethodDescriptor<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest,
+      com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply> getSayHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SayHello",
-      requestType = com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.class,
-      responseType = com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.class,
+      requestType = com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.class,
+      responseType = com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest,
-      com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest, com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply> getSayHelloMethod;
+  public static io.grpc.MethodDescriptor<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest,
+      com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply> getSayHelloMethod() {
+    io.grpc.MethodDescriptor<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest, com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply> getSayHelloMethod;
     if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
       synchronized (GreeterGrpc.class) {
         if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
           GreeterGrpc.getSayHelloMethod = getSayHelloMethod = 
-              io.grpc.MethodDescriptor.<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest, com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply>newBuilder()
+              io.grpc.MethodDescriptor.<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest, com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "Greeter", "SayHello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.getDefaultInstance()))
+                  com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.getDefaultInstance()))
+                  com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.getDefaultInstance()))
                   .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHello"))
                   .build();
           }
@@ -87,6 +88,7 @@ public final class GreeterGrpc {
 
   /**
    * <pre>
+   *package helloworld;
    * The greeter service definition.
    * </pre>
    */
@@ -97,8 +99,8 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void sayHello(com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply> responseObserver) {
+    public void sayHello(com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply> responseObserver) {
       asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
@@ -108,8 +110,8 @@ public final class GreeterGrpc {
             getSayHelloMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest,
-                com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply>(
+                com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest,
+                com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply>(
                   this, METHODID_SAY_HELLO)))
           .build();
     }
@@ -117,6 +119,7 @@ public final class GreeterGrpc {
 
   /**
    * <pre>
+   *package helloworld;
    * The greeter service definition.
    * </pre>
    */
@@ -141,8 +144,8 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void sayHello(com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply> responseObserver) {
+    public void sayHello(com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
@@ -150,6 +153,7 @@ public final class GreeterGrpc {
 
   /**
    * <pre>
+   *package helloworld;
    * The greeter service definition.
    * </pre>
    */
@@ -174,7 +178,7 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply sayHello(com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest request) {
+    public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply sayHello(com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
@@ -182,6 +186,7 @@ public final class GreeterGrpc {
 
   /**
    * <pre>
+   *package helloworld;
    * The greeter service definition.
    * </pre>
    */
@@ -206,8 +211,8 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply> sayHello(
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply> sayHello(
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
@@ -233,8 +238,8 @@ public final class GreeterGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply>) responseObserver);
+          serviceImpl.sayHello((com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -258,7 +263,7 @@ public final class GreeterGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.getDescriptor();
+      return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.getDescriptor();
     }
 
     @java.lang.Override

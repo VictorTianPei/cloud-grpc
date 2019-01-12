@@ -1,0 +1,82 @@
+// 微生活导出服务
+// 导出功能接口
+/*
+    1、 创建任务模板
+    2、 查询、列出任务模板
+    3、 删除任务模板
+    4、 添加导出任务实例
+    5、 查询任务状态
+*/
+syntax = "proto3";
+
+// java 语法特别选项
+option java_multiple_files = true;
+option java_package = "com.jw.platform.pcm.m4910.f010.microservice";
+option java_outer_classname = "WshExportTaskProto";
+// 包名 golang包名，php中namespase,
+package exporttask;
+
+// 导出任务服务定义
+service ExportTask {
+    // 创建任务模板
+    rpc CreateTpl(WshExportTaskCreateTplReq) returns (WshExportTaskCreateTplRes) {}
+    // 查询任务模板
+    rpc ListTpl(WshExportTaskListTplReq) returns (WshExportTaskListTplRes) {}
+}
+
+// 枚举类型，必须从0开始，序号可跨越。同一包下不能重名，所以加前缀来区别
+enum WshExportTplStatus {
+    TPL_INITED = 0;
+    TPL_NORMAL = 1;
+    TPL_DELETED = 9;
+}
+
+enum WshExportFormat {
+    FMT_DEFAULT = 0;
+    FMT_CSV = 1;
+    FMT_XLS = 2;
+}
+
+message WshExportTpl {
+    string etplName = 1;
+    string etplTag = 2;
+    WshExportFormat etplOutputFormat = 3;
+    string etplOutputColumns = 4;
+    string etplExpr = 5;
+    int32 etplId = 6;
+    int32 etplExecTimes = 7;
+    int32 etplExecOkTimes = 8;
+    int32 etplStatus = 9;
+    string etplCreated = 10;
+    string etplUpdated = 11;
+    string etplDeleted = 12;
+    int32 operatorId = 13;
+}
+
+message WshExportTaskCreateTplReq {
+    string etplName = 1;
+    string etplTag = 2;
+    string etplExpr = 3;
+    string etplOutputColumns = 4;
+    WshExportFormat etplOutputFormat = 5;
+    int32 operatorId = 6;
+}
+
+message WshExportTaskCreateTplRes {
+    string errCode = 1;
+    string errMsg = 2;
+    WshExportTpl data = 3;
+}
+
+message WshExportTaskListTplReq {
+    int32 etplId = 1;
+    string etplName = 2;
+    string etplTag = 3;
+}
+
+// repeated 表示数组
+message WshExportTaskListTplRes {
+    string errCode = 1;
+    string errMsg = 2;
+    repeated WshExportTpl data = 3;
+}

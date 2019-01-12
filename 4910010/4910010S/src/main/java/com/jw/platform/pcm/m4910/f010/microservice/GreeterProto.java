@@ -3,8 +3,8 @@
 
 package com.jw.platform.pcm.m4910.f010.microservice;
 
-public final class GreeterOuterClass {
-  private GreeterOuterClass() {}
+public final class GreeterProto {
+  private GreeterProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -99,15 +99,15 @@ public final class GreeterOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloRequest_descriptor;
+      return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloRequest_fieldAccessorTable
+      return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.Builder.class);
+              com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
@@ -183,10 +183,10 @@ public final class GreeterOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest)) {
+      if (!(obj instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest)) {
         return super.equals(obj);
       }
-      com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest other = (com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest) obj;
+      com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest other = (com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest) obj;
 
       boolean result = true;
       result = result && getName()
@@ -209,69 +209,69 @@ public final class GreeterOuterClass {
       return hash;
     }
 
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(byte[] data)
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(java.io.InputStream input)
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseDelimitedFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -284,7 +284,7 @@ public final class GreeterOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest prototype) {
+    public static Builder newBuilder(com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -309,21 +309,21 @@ public final class GreeterOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:HelloRequest)
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequestOrBuilder {
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloRequest_descriptor;
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloRequest_fieldAccessorTable
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.Builder.class);
+                com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.Builder.class);
       }
 
-      // Construct using com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.newBuilder()
+      // Construct using com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -349,17 +349,17 @@ public final class GreeterOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloRequest_descriptor;
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest getDefaultInstanceForType() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.getDefaultInstance();
+      public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest getDefaultInstanceForType() {
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest build() {
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest result = buildPartial();
+      public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest build() {
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -367,8 +367,8 @@ public final class GreeterOuterClass {
       }
 
       @java.lang.Override
-      public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest buildPartial() {
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest result = new com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest(this);
+      public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest buildPartial() {
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest result = new com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest(this);
         result.name_ = name_;
         onBuilt();
         return result;
@@ -408,16 +408,16 @@ public final class GreeterOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest) {
-          return mergeFrom((com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest)other);
+        if (other instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest) {
+          return mergeFrom((com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest other) {
-        if (other == com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest other) {
+        if (other == com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -437,11 +437,11 @@ public final class GreeterOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest parsedMessage = null;
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -536,12 +536,12 @@ public final class GreeterOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:HelloRequest)
-    private static final com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest DEFAULT_INSTANCE;
+    private static final com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest();
+      DEFAULT_INSTANCE = new com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest();
     }
 
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest getDefaultInstance() {
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -566,7 +566,7 @@ public final class GreeterOuterClass {
     }
 
     @java.lang.Override
-    public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloRequest getDefaultInstanceForType() {
+    public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -657,15 +657,15 @@ public final class GreeterOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloReply_descriptor;
+      return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloReply_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloReply_fieldAccessorTable
+      return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloReply_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.Builder.class);
+              com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.Builder.class);
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 1;
@@ -741,10 +741,10 @@ public final class GreeterOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply)) {
+      if (!(obj instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply)) {
         return super.equals(obj);
       }
-      com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply other = (com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply) obj;
+      com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply other = (com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply) obj;
 
       boolean result = true;
       result = result && getMessage()
@@ -767,69 +767,69 @@ public final class GreeterOuterClass {
       return hash;
     }
 
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(byte[] data)
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(java.io.InputStream input)
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseDelimitedFrom(java.io.InputStream input)
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseDelimitedFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parseFrom(
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -842,7 +842,7 @@ public final class GreeterOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply prototype) {
+    public static Builder newBuilder(com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -867,21 +867,21 @@ public final class GreeterOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:HelloReply)
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReplyOrBuilder {
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReplyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloReply_descriptor;
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloReply_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloReply_fieldAccessorTable
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloReply_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.Builder.class);
+                com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.class, com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.Builder.class);
       }
 
-      // Construct using com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.newBuilder()
+      // Construct using com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -907,17 +907,17 @@ public final class GreeterOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.internal_static_HelloReply_descriptor;
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.internal_static_HelloReply_descriptor;
       }
 
       @java.lang.Override
-      public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply getDefaultInstanceForType() {
-        return com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.getDefaultInstance();
+      public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply getDefaultInstanceForType() {
+        return com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply build() {
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply result = buildPartial();
+      public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply build() {
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -925,8 +925,8 @@ public final class GreeterOuterClass {
       }
 
       @java.lang.Override
-      public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply buildPartial() {
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply result = new com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply(this);
+      public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply buildPartial() {
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply result = new com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply(this);
         result.message_ = message_;
         onBuilt();
         return result;
@@ -966,16 +966,16 @@ public final class GreeterOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply) {
-          return mergeFrom((com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply)other);
+        if (other instanceof com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply) {
+          return mergeFrom((com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply other) {
-        if (other == com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply other) {
+        if (other == com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply.getDefaultInstance()) return this;
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
@@ -995,11 +995,11 @@ public final class GreeterOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply parsedMessage = null;
+        com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply) e.getUnfinishedMessage();
+          parsedMessage = (com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1094,12 +1094,12 @@ public final class GreeterOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:HelloReply)
-    private static final com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply DEFAULT_INSTANCE;
+    private static final com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply();
+      DEFAULT_INSTANCE = new com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply();
     }
 
-    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply getDefaultInstance() {
+    public static com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1124,7 +1124,7 @@ public final class GreeterOuterClass {
     }
 
     @java.lang.Override
-    public com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass.HelloReply getDefaultInstanceForType() {
+    public com.jw.platform.pcm.m4910.f010.microservice.GreeterProto.HelloReply getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1152,8 +1152,9 @@ public final class GreeterOuterClass {
       "\n\023proto/greeter.proto\"\034\n\014HelloRequest\022\014\n" +
       "\004name\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001" +
       "(\t23\n\007Greeter\022(\n\010SayHello\022\r.HelloRequest" +
-      "\032\013.HelloReply\"\000B-\n+com.jw.platform.pcm.m" +
-      "4910.f010.microserviceb\006proto3"
+      "\032\013.HelloReply\"\000B;\n+com.jw.platform.pcm.m" +
+      "4910.f010.microserviceB\014GreeterProtob\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

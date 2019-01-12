@@ -44,6 +44,6 @@ spring:
         health-check-interval: 30s
         # 设置健康检查失败多长时间后，取消注册
         health-check-critical-timeout: 30s
-        healthCheckPath: ${server.servlet.context-path}/actuator/health
+        health-check-path: ${server.servlet.context-path}/actuator/health
         instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
   

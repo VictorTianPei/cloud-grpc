@@ -9,10 +9,9 @@
 package com.jw.platform.pcm.m4910.f010.service;
 
 
-import org.springframework.stereotype.Service;
-
 import com.jw.platform.pcm.m4910.f010.microservice.GreeterGrpc;
-import com.jw.platform.pcm.m4910.f010.microservice.GreeterOuterClass;
+import com.jw.platform.pcm.m4910.f010.microservice.GreeterProto;
+import org.springframework.stereotype.Service;
 
 import io.grpc.Channel;
 import net.devh.springboot.autoconfigure.grpc.client.GrpcClient;
@@ -36,7 +35,7 @@ public class GrpcClientService {
 
     public String sendMessage(String name) {
         GreeterGrpc.GreeterBlockingStub stub= GreeterGrpc.newBlockingStub(serverChannel);
-        GreeterOuterClass.HelloReply response = stub.sayHello(GreeterOuterClass.HelloRequest.newBuilder().setName(name).build());
+        GreeterProto.HelloReply response = stub.sayHello(GreeterProto.HelloRequest.newBuilder().setName(name).build());
         return response.getMessage();
     }
 }

@@ -3,6 +3,7 @@ package com.test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 @RibbonClient(name = "say-hello", configuration = SayHelloConfiguration.class)
 @EnableFeignClients//Fegin 的注解
 @EnableHystrixDashboard
+@EnableCircuitBreaker
 public class UserApplication {
 
 	@LoadBalanced

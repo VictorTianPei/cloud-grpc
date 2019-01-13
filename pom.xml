@@ -110,5 +110,7 @@
 		<module>http-server</module>
         <module>demo-mybatis</module>
 		<module>demo-redis</module>
+        <module>demo-test</module>
+		<module>demo-mq</module>
 	</modules>
 </project>

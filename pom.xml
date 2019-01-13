@@ -106,5 +106,7 @@
 		<module>4910010R</module>
 		<module>4910010RA</module>
 		<module>4100000C</module>
+        <module>http-client</module>
+		<module>http-server</module>
 	</modules>
 </project>

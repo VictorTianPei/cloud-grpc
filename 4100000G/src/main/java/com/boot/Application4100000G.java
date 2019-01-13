@@ -1,5 +1,5 @@
 /**   
- * @Title: Application.java 
+ * @Title: Application4100000G.java
  * @Package cn.com.tp 
  * @Description: TODO(用一句话描述该文件做什么) 
  * @author [tianpei] 
@@ -23,10 +23,10 @@ import org.springframework.context.annotation.Bean;
  * @since
 日期|作者|类型|内容
 :----|:-----|:-----|:-----
-2019年1月9日|tianpei|新增|Application.java新增
+2019年1月9日|tianpei|新增|Application4100000G.java新增
  */
 @SpringBootApplication
-public class Application {
+public class Application4100000G {
 
 	@Bean
 	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
@@ -38,6 +38,6 @@ public class Application {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(Application4100000G.class, args);
 	}
 }

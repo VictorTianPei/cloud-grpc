@@ -108,5 +108,7 @@
 		<module>4100000C</module>
         <module>http-client</module>
 		<module>http-server</module>
+        <module>demo-mybatis</module>
+		<module>demo-redis</module>
 	</modules>
 </project>

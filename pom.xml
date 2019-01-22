@@ -112,5 +112,6 @@
 		<module>demo-redis</module>
         <module>demo-test</module>
 		<module>demo-mq</module>
-	</modules>
+        <module>public-service</module>
+    </modules>
 </project>

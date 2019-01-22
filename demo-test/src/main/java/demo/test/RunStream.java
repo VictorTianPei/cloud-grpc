@@ -1,8 +1,10 @@
+/*
 package demo.test;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
+*/
 /**
  * 验证stream运行机制
  *
@@ -18,7 +20,8 @@ import java.util.stream.Stream;
  *
  * @author 晓风轻
  *
- */
+ *//*
+
 public class RunStream {
 
 	public static void main(String[] args) {
@@ -48,11 +51,13 @@ public class RunStream {
 		stream.count();
 	}
 
-	/**
+	*/
+/**
 	 * 打印日志并sleep 5 毫秒
 	 *
 	 * @param s
-	 */
+	 *//*
+
 	public static void print(String s) {
 		// System.out.println(s);
 		// 带线程名(测试并行情况)
@@ -62,4 +67,4 @@ public class RunStream {
 		} catch (InterruptedException e) {
 		}
 	}
-}
+}*/

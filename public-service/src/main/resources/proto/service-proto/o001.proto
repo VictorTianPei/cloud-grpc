@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+import public "proto/message-proto/basic.proto";
+import public "proto/message-proto/sms-message-model.proto";
+
+option java_package = "platform.service.O001";
+option java_multiple_files = true;
+
+package Platform.Service.O001;
+
+service O001Service{
+  // 发送普通短信
+  rpc sendMessage (SendMessageRequest) returns (SendMessageResponse) {}
+  // 发送模板短信
+  rpc sendExpMessage (SendMessageRequest) returns (SendMessageResponse) {}
+  // 查询短信报告
+  rpc searchReport (SmsSearchRequest) returns (SmsSearchResponse) {}
+  // 查询上行数据
+  rpc searchMosMessage (SmsSearchRequest) returns (SmsSearchResponse) {}
+  // 查询余额
+  //rpc searchBalance (Common.EmptyParams) returns (SmsSearchResponse) {}
+}
+
+// 发送短信结构
+message SendMessageRequest{
+  Platform.Message.SmsMessage.SmsMessageModel submitData = 1;
+}
+
+// 发送短信响应结构
+message SendMessageResponse{
+  Platform.Message.BasicMessage.Common.Basic resultComm = 1;
+  Platform.Message.SmsMessage.SmsResMessageModel resultData = 2;
+}
+
+// 查询参数结构
+message SmsSearchRequest{
+  Platform.Message.SmsMessage.SmsSearchModel submitData = 1;
+}
+
+// 查询响应结构
+message SmsSearchResponse{
+  Platform.Message.BasicMessage.Common.Basic resultComm = 1;
+  Platform.Message.SmsMessage.SmsResSearchModel resultData = 2;
+}

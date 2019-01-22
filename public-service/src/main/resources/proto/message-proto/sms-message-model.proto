@@ -1,0 +1,161 @@
+syntax = "proto3";
+
+package Platform.Message.SmsMessage;
+
+import public "proto/message-proto/basic.proto";
+
+option java_package = "platform.message.smsmessage";
+option java_outer_classname = "SmsMessageModelProto";
+option java_multiple_files = true;
+// 短信类型
+enum MsgTypeEnum {
+  // 营销
+  marketing = 0;
+  // 通知
+  notice = 1;
+}
+
+//短信状态
+enum SmsStatusEnum{
+  //未提交
+  unSubmit = 0;
+  //提交成功
+  submit = 1;
+  //提交失败
+  submitErr = 2;
+  //发送成功
+  sendSuc = 3;
+  //发送失败
+  sendErr = 4;
+}
+
+// 短信消息结构
+message SmsMessageModel{
+  // 短信消息数据
+  message SmsData {
+    // 手机号 多个手机号用逗号分隔
+    string mobile = 1;
+    // 短信定时时间戳,如果不填,则短信非定时短信 非必须
+    int32 schTime = 2;
+    // 客户自定义smsid非必填
+    string customSmsId = 3;
+    // 扩展码非必填
+    string extendedCode = 4;
+    // 短信模板代码
+    string templeteCode = 5;
+    // 短信模板对象
+    message SmsKeyValue {
+      // 为模板变量名
+      string key = 1;
+      // 为模板变量值
+      string value = 2;
+    }
+    // 短信消息模板
+    repeated SmsKeyValue smsTempContent = 6;
+    // 普通短信内容
+    string smsContent = 7;
+    //标题
+    string title = 8;
+  }
+  // 账号类型 目前支持营销或通知 营销[marketing] 通知[notice]
+  MsgTypeEnum msgType = 1;
+  // 发送的数据数组 长度最大为10
+  repeated SmsData msgData = 2;
+  // 短信签名 不传从环境变量里取
+  string msgSign = 3;
+  // 发送短信的用户账号 非必须
+  string msgAccount = 4;
+  //来源信息
+  Platform.Message.BasicMessage.SourceInfo sourceInfo = 5;
+}
+
+// 发送短信返回值结构
+message SmsResMessageModel{
+  // 供应商返回消息数据对象
+  message SmsData{
+    // 供应商ID
+    string smsId = 1;
+    // 手机号
+    string mobile = 2;
+    // 自定义编号
+    string customSmsId = 3;
+    // mongodb存储的消息id
+    string messageId = 4;
+  }
+  // 余额
+  int64 balance = 1;
+  // 处理条数
+  int32 total = 2;
+  // 消息实体数据
+  repeated SmsData smsData = 3;
+}
+
+// 上行短信响应结构
+message SmsResSearchModel{
+  // 总数
+  int32 total = 1;
+  // 余额
+  int64 balance = 10;
+  // 上行数据结构
+  message SmsMosData {
+    // 特服号
+    string serviceCode = 1;
+    // 手机号
+    string mobile = 2;
+    // 扩展码
+    string extendedCode = 3;
+    // 短信内容
+    string content = 4;
+    // 上行时间
+    int64 mobileMoTime = 5;
+  }
+  // 短信报告
+  message SmsReportData{
+    // 供应商ID
+    string smsId = 1;
+    // 自定义编号
+    string customSmsId = 2;
+    // 手机号
+    string mobile = 3;
+    // 状态
+    bool state = 4;
+    // 用户接受到短信的时间
+    string receiveTime = 5;
+    // 用户提交短信的时间
+    string submitTime = 6;
+    // 用户扩展码
+    string extendedCode = 7;
+    // 状态报告详细描述
+    string desc = 8;
+  }
+  // 上行数据
+  repeated SmsMosData smsMosData = 20;
+  // 短信报告
+  repeated SmsReportData smsReportData = 21;
+}
+
+// 上行查询结构
+message SmsSearchModel{
+  // 账号类型 目前支持营销或通知 营销[marketing] 通知[notice]
+  MsgTypeEnum msgType = 1;
+  // smsNumber 返回数据条数,默认300
+  string smsNumber = 2;
+}
+
+//短信查询实体
+message SmsMessageSearchModel{
+  //消息id
+  string messageId = 1;
+  //接收地址
+  string mobile = 2;
+  //标题
+  string title = 3;
+  //内容
+  string content = 4;
+  //状态
+  SmsStatusEnum status = 5;
+  //短信类型 0：通知 1：营销
+  MsgTypeEnum msgType = 6;
+  //发送时间
+  string sendTm = 7;
+}

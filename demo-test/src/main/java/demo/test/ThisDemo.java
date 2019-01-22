@@ -5,12 +5,14 @@
  * @author A18ccms A18ccms_gmail_com   
  * @date 2019年1月13日 下午8:00:17 
  * @version V1.0   
- */
+ *//*
+
 package demo.test;
 
 
 import java.util.function.IntUnaryOperator;
 
+*/
 /**
  * ## 类说明：
  * 	描述
@@ -21,7 +23,8 @@ import java.util.function.IntUnaryOperator;
 日期|作者|类型|内容
 :----|:-----|:-----|:-----
 2019年1月13日|tianpei|新增|ThisDemo.java新增
- */
+ *//*
+
 public class ThisDemo {
 
     public static void main(String[] args) {
@@ -39,19 +42,23 @@ public class ThisDemo {
 }
 class DemoClass {
 
-    /**
+    */
+/**
      * 这里是一个静态方法
-     */
+     *//*
+
     public static int staticMethod(int i) {
         return i * 2;
     }
 
-    /**
+    */
+/**
      * 这里是一个实例方法
-     */
+     *//*
+
     public int normalMethod(DemoClass this,int i) {
         System.out.println("实例方法可以访问this:" + this);
         return i * 2;
     }
 
-}
+}*/

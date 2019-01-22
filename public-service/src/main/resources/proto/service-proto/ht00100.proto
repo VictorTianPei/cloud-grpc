@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+import public "proto/message-proto/basic.proto";
+import public "proto/message-proto/sms-message-model.proto";
+
+option java_package = "platform.service.ht00100";
+option java_multiple_files = true;
+
+package Platform.Service.ht00100;
+
+service Ht00100Service{
+  //发送短信消息
+  rpc send(SendMessageRequest) returns (SendMessageResponse) {}
+  //查询短信消息列表
+  rpc list(MessageListRequest) returns (MessageListResponse) {}
+}
+
+// 发送短信结构
+message SendMessageRequest{
+  Platform.Message.SmsMessage.SmsMessageModel submitData = 1;
+}
+
+// 发送短信响应结构
+message SendMessageResponse{
+  Platform.Message.BasicMessage.Common.Basic resultComm = 1;
+  Platform.Message.SmsMessage.SmsResMessageModel resultData = 2;
+}
+
+//查询消息列表请求数据
+message MessageListRequest{
+  //分页信息
+  Platform.Message.BasicMessage.Common.PageParams pageParams = 1;
+  //短信类型 0：通知 1：营销
+  Platform.Message.SmsMessage.MsgTypeEnum msgType = 2;
+  //接收地址
+  repeated string receiveAddr = 3;
+  //开始时间时间戳
+  string startDt = 4;
+  //结束时间时间戳
+  string endDt = 5;
+  //状态
+  repeated Platform.Message.SmsMessage.SmsStatusEnum status = 6;
+  //来源信息
+  Platform.Message.BasicMessage.SourceInfo sourceInfo = 7;
+}
+
+//查询消息列表响应数据
+message MessageListResponse{
+  //返回结果状态
+  Platform.Message.BasicMessage.Common.Basic resultcomm = 1;
+  //分页信息
+  Platform.Message.BasicMessage.Common.PageParams pageParams = 2;
+  //列表数据
+  repeated Platform.Message.SmsMessage.SmsMessageSearchModel messageList = 3;
+}

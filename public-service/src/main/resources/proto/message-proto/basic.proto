@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package Platform.Message.BasicMessage;
+
+option java_package = "platform.message.basicmessage";
+option java_outer_classname = "BasicProto";
+option java_multiple_files = true;
+
+// 返回状态
+enum ResStatusEnum {
+  // 成功
+  succeed = 0;
+  // 业务错误
+  buserror = 1;
+  // 一致性错误 等级1
+  consistencyerrorlevel1 = 10;
+  // 一致性错误 等级2
+  consistencyerrorlevel2 = 11;
+  // 数据库错误
+  dberror = 90;
+  // 未知错误
+  unknownerror = 99;
+}
+
+// 追踪方向状态
+enum DirStatusEnum {
+  // 进
+  in = 0;
+  // 出
+  out = 1;
+}
+
+// 追踪数据
+message Tracer {
+  // 服务名称
+  string serviceName = 1;
+  // 接口名称
+  string interfaceName = 2;
+  // 调用方向
+  DirStatusEnum direction = 3;
+  // 出入参数据
+  string dataString = 4;
+}
+
+// 共同返回值
+message Common {
+  // 共通返回值定义
+  message Basic {
+    // 返回值状态 ：大于0属于业务错误，小于0属于系统错误
+    // 0:正确 1:业务错误 10:一致性错误（1级回滚标识）11:一致性错误（2级回滚标识）90:数据库错误 99:未知错误
+    ResStatusEnum resultStatus = 1;
+    // 错误编码
+    string errCode = 2;
+    // 错误简述
+    string errShort = 3;
+    // 错误详情
+    string errInfo = 4;
+    // 追踪ID
+    string tracerId = 5;
+    // 追踪数据 开启调试模式时返回，生产环境不需要返回
+    repeated Tracer tracerData = 6;
+  }
+  // 空参数对象
+  message EmptyParams{
+
+  }
+  // 翻页返回值定义
+  message PageParams{
+    int32 pageSize = 1;
+    int32 currentPage = 2;
+    int32 count = 3;
+    string lastId = 4;
+  }
+}
+
+
+//来源信息
+message SourceInfo{
+  //集团标识
+  string unitCd = 1;
+  //发送单位标识(可以是集团、或酒店)
+  string sendUnitcd = 2;
+  //用户标识
+  string userId = 3;
+  //短信令牌标识
+  string tokenId = 4;
+}

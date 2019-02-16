@@ -31,18 +31,18 @@ spring:
         # 配置所在的应用目录名称
         prefix: config
         name: ${spring.application.name}
-      discovery:
-        # 启用服务发现
-        enabled: true
-        # 启用服务注册
-        register: true
-        # 服务停止时取消注册
-        deregister: true
-        # 表示注册时使用IP而不是hostname
-        prefer-ip-address: true
-        # 执行监控检查的频率
-        health-check-interval: 30s
-        # 设置健康检查失败多长时间后，取消注册
-        health-check-critical-timeout: 30s
-        health-check-path: ${server.servlet.context-path}/actuator/health
-        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+#      discovery:
+#        # 启用服务发现
+#        enabled: true
+#        # 启用服务注册
+#        register: true
+#        # 服务停止时取消注册
+#        deregister: true
+#        # 表示注册时使用IP而不是hostname
+#        prefer-ip-address: true
+#        # 执行监控检查的频率
+#        health-check-interval: 30s
+#        # 设置健康检查失败多长时间后，取消注册
+#        health-check-critical-timeout: 30s
+#        health-check-path: ${server.servlet.context-path}/actuator/health
+#        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}

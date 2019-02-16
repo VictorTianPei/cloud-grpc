@@ -12,7 +12,7 @@ import com.jw.platform.pcm.m4910.f010.microservice.GreeterGrpc;
 import com.jw.platform.pcm.m4910.f010.microservice.GreeterProto;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
-import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
+import net.devh.boot.grpc.server.service.GrpcService;
 
 /**
  * ## 类说明：
@@ -26,7 +26,7 @@ import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
 2019年1月4日|tianpei|新增|GreeterServic.java新增
 */
 @Slf4j
-@GrpcService(GreeterProto.class)
+@GrpcService
 public class GreeterService extends GreeterGrpc.GreeterImplBase {
     @Override
     public void sayHello(GreeterProto.HelloRequest request, StreamObserver<GreeterProto.HelloReply> responseObserver) {

@@ -11,10 +11,10 @@ package com.jw.platform.pcm.m4910.f010.service;
 
 import com.jw.platform.pcm.m4910.f010.microservice.GreeterGrpc;
 import com.jw.platform.pcm.m4910.f010.microservice.GreeterProto;
+import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;
 
 import io.grpc.Channel;
-import net.devh.springboot.autoconfigure.grpc.client.GrpcClient;
 
 /**
  * ## 类说明：

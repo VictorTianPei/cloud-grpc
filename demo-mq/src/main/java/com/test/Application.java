@@ -1,3 +1,4 @@
+/*
 package com.test;
 
 import org.springframework.amqp.core.Binding;
@@ -45,7 +46,9 @@ public class Application {
 
 	@Bean
 	MessageListenerAdapter listenerAdapter(Receiver receiver) {
-		return new MessageListenerAdapter(receiver, "receiveMessage");
+		MessageListenerAdapter receiveMessage = new MessageListenerAdapter(receiver, "receiveMessage");
+
+		return receiveMessage;
 	}
 
 	public static void main(String[] args) throws InterruptedException {
@@ -53,3 +56,4 @@ public class Application {
 	}
 
 }
+*/

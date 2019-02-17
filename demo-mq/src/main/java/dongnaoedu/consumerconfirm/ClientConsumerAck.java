@@ -20,7 +20,6 @@ public class ClientConsumerAck {
         Connection connection = factory.newConnection();//连接
         Channel channel = connection.createChannel();//信道
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.DIRECT);//交换器
-
         //声明队列
         String queueName = "consumer_confirm";
         channel.queueDeclare(queueName,false,false,

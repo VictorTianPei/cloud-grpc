@@ -114,5 +114,6 @@
 		<module>demo-mq</module>
 		<module>demo-websocket</module>
 		<module>demo-jpa</module>
-	</modules>
+        <module>demo-mq-sender</module>
+    </modules>
 </project>

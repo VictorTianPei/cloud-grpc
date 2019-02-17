@@ -23,7 +23,10 @@ public class ConsumerAll {
         Channel channel = connection.createChannel();//信道
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);//交换器
         //声明随机队列
-        String queueName = channel.queueDeclare().getQueue();
+       // String queueName = channel.queueDeclare().getQueue();
+        String queueName = "anewqueue";
+        channel.queueDeclarePassive(queueName);
+        System.out.println("queueName:" + queueName);
         String[]serverities = {"error","info","warning"};
         for(String server:serverities){
             //队列和交换器的绑定
@@ -38,6 +41,8 @@ public class ConsumerAll {
                     throws IOException {
                 String message = new String(body,"UTF-8");
                 System.out.println("Accept:"+envelope.getRoutingKey()+":"+message);
+                System.out.println(connection.toString());
+                System.out.println(channel.toString());
             }
         };
 

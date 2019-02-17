@@ -12,15 +12,15 @@ import java.util.concurrent.TimeoutException;
  */
 public class ConsumerError {
 
-    //private static final String EXCHANGE_NAME = "direct_logs";
-    private static final String EXCHANGE_NAME = "fanout_logs_1";
+    private static final String EXCHANGE_NAME = "direct_logs";
+    //private static final String EXCHANGE_NAME = "fanout_logs_1";
 
     public static void main(String[] argv) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("127.0.0.1");
         Connection connection = factory.newConnection();//连接
         Channel channel = connection.createChannel();//信道
-        channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);//交换器
+        channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.DIRECT);//交换器
         //声明随机队列
         String queueName = channel.queueDeclare().getQueue();
         String server = "error";

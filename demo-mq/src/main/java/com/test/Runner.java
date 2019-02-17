@@ -1,3 +1,4 @@
+/*
 package com.test;
 
 import java.util.concurrent.TimeUnit;
@@ -6,7 +7,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Runner implements CommandLineRunner {
 
 	private final RabbitTemplate rabbitTemplate;
@@ -24,4 +25,4 @@ public class Runner implements CommandLineRunner {
 		receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
 	}
 
-}
+}*/

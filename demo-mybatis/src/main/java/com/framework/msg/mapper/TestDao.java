@@ -9,8 +9,10 @@
 package com.framework.msg.mapper;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
+import com.test.TestSource;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -30,8 +32,9 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface TestDao {
 
-    @Select("select * from plf_help_main;")
-    public Map<String,Object> find();
+    @TestSource
+    @Select("select * from sys_user;")
+    public List<Map<String,Object>> find();
     
     @Insert("insert into plf_help_main(help_id,sysid,help_typ,language_id,created_date,modified_date) "+
             "values(#{help_id},'1','2',1,now(),#{modified_date})")

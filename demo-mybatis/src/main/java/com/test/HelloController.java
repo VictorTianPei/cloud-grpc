@@ -9,11 +9,12 @@
 package com.test;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
+import com.test.service.impl.TestBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.framework.msg.mapper.TestDao;
@@ -34,9 +35,20 @@ public class HelloController {
 
 	@Autowired
 	TestDao testDao;
+
+	@Autowired
+	TestBean testBean;
 	
 	@GetMapping("/test")
-	public Map test() {
+	public String test() throws Exception {
+		System.out.println("-------------开始执行-------------------");
+		String retStr = testBean.test("hahahhahahah");
+		System.out.println("-------------执行调用结束-------------------");
+		return retStr;
+	}
+	@GetMapping("/test1")
+	public List<Map<String, Object>> test1() throws Exception {
+		System.out.println("-------------开始执行-------------------");
 		return testDao.find();
 	}
 	

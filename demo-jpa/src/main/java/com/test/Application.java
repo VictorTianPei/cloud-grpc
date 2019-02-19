@@ -38,7 +38,7 @@ public class Application {
 		return new JdbcDaoImpl(dataSource);
 	}
 
-	//@Bean
+	@Bean
 	public CommandLineRunner demo(SysUserRepository repository) {
 		return (args) -> {
 			// save a couple of customers
@@ -109,7 +109,7 @@ public class Application {
 
 	@Autowired
 	TestDao testDao;
-	@Bean
+	//@Bean
 	public CommandLineRunner demo3() {
 		return args -> {
 			Page page = new Page();
